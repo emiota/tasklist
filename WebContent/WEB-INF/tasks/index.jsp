@@ -10,12 +10,12 @@
         <h2>タスク一覧</h2>
         <ul>
             <c:forEach var="task" items="${tasks}">
-                <il>
+                <li>
                     <a href="${pageContext.request.contextPath}/show?id=${task.id}">
                         <c:out value="${task.id}"/>
                     </a>
-                    :<c:out value="${task.context}" />
-                </il>
+                    :<c:out value="${task.content}" />
+                </li>
             </c:forEach>
         </ul>
 <div id="pagination">
@@ -32,5 +32,6 @@
        </c:forEach>
     </div>
     <p><a href="${pageContext.request.contextPath}/new">新規タスクの投稿</a></p>
+
     </c:param>
 </c:import>
